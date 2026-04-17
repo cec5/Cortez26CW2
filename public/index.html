@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admissions Visualizer</title>
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <div class="header">
+        <h2>NHS Hospital Admissions: Lockdown Impact</h2>
+        
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchView('macro')">Macro (Chapters)</button>
+            <button class="tab-btn" onclick="switchView('chapter')">Chapter Drilldown</button>
+            <button class="tab-btn" onclick="switchView('custom')">Custom Builder</button>
+        </div>
+
+        <div class="metric-toggles">
+            <button class="metric-btn active" onclick="setMetric('total')">Total Admissions</button>
+            <button class="metric-btn" onclick="setMetric('emergency')">Emergency</button>
+            <button class="metric-btn" onclick="setMetric('planned')">Planned</button>
+        </div>
+    </div>
+
+    <div id="view-controls" class="controls">
+        </div>
+
+    <div id="chart-container"></div>
+
+    <div class="legend-container">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h3>Active Categories (Click to Toggle)</h3>
+            <div>
+                <button onclick="enableAllCategories()" style="background:#48bb78; color:white; margin-right:5px;">Enable All</button>
+                <button onclick="disableAllCategories()" style="background:#e53e3e; color:white;">Disable All</button>
+            </div>
+        </div>
+        <div id="interactive-legend" class="legend-pills"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
