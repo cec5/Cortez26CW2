@@ -48,7 +48,7 @@ EXIT;
 
 Restore the database from the provided SQL dump file. From the root directory of this project, run:
 ```bash
-mysql -u admin -p NHSData < src/database/database.backup.sql
+mysql -u admin -p NHSData < src/database/database_backup.sql
 ```
 *(When prompted for a password, type: `admin`)*
 
