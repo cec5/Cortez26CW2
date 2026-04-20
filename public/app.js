@@ -262,6 +262,8 @@ function renderPlotlyChart(uniqueEntities) {
         customdata: rawMatrix,
         colorscale: 'YlOrRd', 
         showscale: false,
+        zmin: 0,
+        zmax: 1,
         hovertemplate: '<b>%{y}</b><br>Year: %{x}<br>Admissions: %{customdata:,.0f}<extra></extra>' 
     };
 
